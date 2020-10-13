@@ -59,8 +59,8 @@
 param(
 
     [Parameter()]
-    [ValidateSet('20.4.1', '20.4.0', '19.10.19','19.10.15','19.4.4', '19.4.3', '19.4.2', '18.4.6', '18.4.5', '18.4.4', '18.4.3', '18.4.2', '18.4.1')]
-    [string] $orchestratorVersion = "20.4.1",
+    [ValidateSet('20.4.0', '20.4.1', '19.10.19','19.10.15','19.4.4', '19.4.3', '19.4.2', '18.4.6', '18.4.5', '18.4.4', '18.4.3', '18.4.2', '18.4.1')]
+    [string] $orchestratorVersion = "19.10.19",
 
     [Parameter()]
     [string] $orchestratorFolder = "${env:ProgramFiles(x86)}\UiPath\Orchestrator",
@@ -146,8 +146,8 @@ function Main {
         $source = @()
         $source += "https://download.uipath.com/versions/$orchestratorVersion/UiPathOrchestrator.msi"
         $source += "https://download.microsoft.com/download/1/2/8/128E2E22-C1B9-44A4-BE2A-5859ED1D4592/rewrite_amd64_en-US.msi"
-        $source += "https://go.microsoft.com/fwlink/?linkid=2088631"
-        $source += "https://download.visualstudio.microsoft.com/download/pr/854cbd11-4b96-4a44-9664-b95991c0c4f7/8ec4944a5bd770faba2f769e647b1e6e/dotnet-hosting-3.1.8-win.exe"
+        $source += "https://download.microsoft.com/download/6/E/4/6E48E8AB-DC00-419E-9704-06DD46E5F81D/NDP472-KB4054530-x86-x64-AllOS-ENU.exe"
+        $source += "https://download.visualstudio.microsoft.com/download/pr/ff658e5a-c017-4a63-9ffe-e53865963848/15875eef1f0b8e25974846e4a4518135/dotnet-hosting-3.1.3-win.exe"
         $tries = 5
         while ($tries -ge 1) {
             try {
